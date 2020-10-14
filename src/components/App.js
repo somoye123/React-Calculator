@@ -1,10 +1,11 @@
 import React from 'react';
+import '../style.css';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App d-flex">
       <Display />
       <ButtonPanel />
     </div>

@@ -1,0 +1,41 @@
+.App {
+  flex-direction: column;
+  width: 700px;
+  margin: 20px auto;
+}
+
+.result {
+  background-color: #858293;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  font-weight: bolder;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 45px;
+  padding-right: 10px;
+}
+
+.group {
+  height: 100px;
+  width: 100%;
+}
+
+.button {
+  width: 25%;
+  height: 100%;
+  font-size: 25px;
+  border: 1px solid darkgray;
+}
+
+.orange {
+  background-color: #f5913e;
+}
+
+.gray {
+  background-color: #e0e0e0;
+}
+
+.button1 {
+  width: 50%;
+}

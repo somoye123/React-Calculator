@@ -8,14 +8,16 @@ export default function ButtonPanel() {
   const Group4 = ['1', '2', '3', '+'];
   const Group5 = ['0', '.', '='];
 
+  const orangeButton = ['÷', 'x', '-', '+', '='];
+
   const Groups = [Group1, Group2, Group3, Group4, Group5];
 
   return (
     <div>
       {Groups.map(group => (
-        <div className="group" key={group}>
+        <div className="group d-flex" key={group}>
           {group.map(char => (
-            <Button key={char} buttonName={`${char}`} />
+            <Button key={char} buttonName={`${char}`} color={!orangeButton.includes(char)} wide={char === '0'} />
           ))}
         </div>
       ))}
