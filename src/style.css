@@ -1,4 +1,9 @@
 .App {
   flex-direction: column;
   width: 700px;
+  margin: 20px auto;
+}
+
+.result {
+  background-color: #858293;
 }
