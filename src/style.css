@@ -27,3 +27,11 @@
   font-size: 25px;
   border: 1px solid darkgray;
 }
+
+.orange {
+  background-color: #f5913e;
+}
+
+.gray {
+  background-color: #e0e0e0;
+}
