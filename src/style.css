@@ -1,3 +1,4 @@
 .App {
+  flex-direction: column;
   width: 700px;
 }
