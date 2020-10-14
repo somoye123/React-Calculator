@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Display({ result }) {
   return (
-    <div className="result">{result}</div>
+    <div className="result d-flex">{result}</div>
   );
 }
 Display.defaultProps = {

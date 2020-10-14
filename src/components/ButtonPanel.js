@@ -13,7 +13,7 @@ export default function ButtonPanel() {
   return (
     <div>
       {Groups.map(group => (
-        <div className="group" key={group}>
+        <div className="group d-flex" key={group}>
           {group.map(char => (
             <Button key={char} buttonName={`${char}`} />
           ))}
