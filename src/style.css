@@ -15,3 +15,15 @@
   font-size: 45px;
   padding-right: 10px;
 }
+
+.group {
+  height: 100px;
+  width: 100%;
+}
+
+.button {
+  width: 25%;
+  height: 100%;
+  font-size: 25px;
+  border: 1px solid darkgray;
+}
