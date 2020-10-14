@@ -11,4 +11,6 @@ export default function Button({ buttonName }) {
 
 Button.propTypes = {
   buttonName: PropTypes.string.isRequired,
+  color: PropTypes.bool,
+  wide: PropTypes.bool,
 };
