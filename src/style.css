@@ -10,6 +10,8 @@
   height: 100px;
   color: #fff;
   font-weight: bolder;
+  justify-content: flex-end;
+  align-items: center;
   font-size: 45px;
   padding-right: 10px;
 }
