@@ -7,6 +7,7 @@ The project was splited into multiple milestones, and each milestone had functio
 - When the app is opened, you can make calculations, such as: sum, substraction, multiplication and division.
 
 ## ScreenShot
+![screenshot](screenShot.png)
 
 ## Live Demo
 [Calculator Link](https://somoye-calculate.herokuapp.com)
