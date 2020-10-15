@@ -11,16 +11,12 @@ export default (numberOne, numberTwo, operation) => {
       return x.plus(y).toString();
     case 'x':
       return x.mul(y).toString();
-    case '÷':
+    default:
       if (numberTwo === '0') {
         total = 'Infinity';
       } else {
         total = x.div(numberTwo).toString();
       }
       return total;
-    default:
-      break;
   }
-
 };
-
