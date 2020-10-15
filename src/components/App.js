@@ -19,11 +19,12 @@ export default class App extends React.Component {
     const result = Calculate({ total, next, operation }, buttonName);
     this.setState({ total: result.total, next: result.next, operation: result.operation });
   }
-  
+
   render() {
+    const { total, next } = this.state;
     return (
       <div className="App d-flex">
-        <Display />
+        <Display result={total} next={next} />
         <ButtonPanel />
       </div>
     );
