@@ -20,7 +20,13 @@ export default function ButtonPanel({clickHandler}) {
       {Groups.map(group => (
         <div className="group d-flex" key={group}>
           {group.map(char => (
-            <Button key={char} buttonName={`${char}`} color={!orangeButton.includes(char)} wide={char === '0'} />
+            <Button
+              key={char}
+              buttonName={`${char}`}
+              color={!orangeButton.includes(char)}
+              wide={char === '0'}
+              clickHandler={handleClick}
+            />
           ))}
         </div>
       ))}
