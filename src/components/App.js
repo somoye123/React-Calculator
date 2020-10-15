@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <div className="App d-flex">
         <Display result={total} next={next} />
-        <ButtonPanel />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }
