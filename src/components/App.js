@@ -4,7 +4,7 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import Calculate from '../logic/calculate';
 
-export default class App extends React.Component{
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -13,13 +13,13 @@ export default class App extends React.Component{
       operation: null,
     };
   } 
-}
 
-export default function App() {
-  return (
-    <div className="App d-flex">
-      <Display />
-      <ButtonPanel />
-    </div>
-  );
+  render() {
+    return (
+      <div className="App d-flex">
+        <Display />
+        <ButtonPanel />
+      </div>
+    );
+  }
 }
