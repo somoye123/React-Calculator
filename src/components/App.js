@@ -14,6 +14,12 @@ export default class App extends React.Component {
     };
   } 
 
+  handleClick = buttonName => {
+    const { total, next, operation } = this.state;
+    const result = Calculate({ total, next, operation }, buttonName);
+    this.setState({ total: result.total, next: result.next, operation: result.operation });
+  }
+  
   render() {
     return (
       <div className="App d-flex">
