@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default function ButtonPanel() {
+export default function ButtonPanel({clickHandler}) {
   const Group1 = ['AC', '+/-', '%', '÷'];
   const Group2 = ['7', '8', '9', 'x'];
   const Group3 = ['4', '5', '6', '-'];
@@ -27,3 +27,11 @@ export default function ButtonPanel() {
     </div>
   );
 }
+
+ButtonPanel.defaultProps = {
+  clickHandler: null,
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func,
+};
