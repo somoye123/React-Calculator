@@ -2,8 +2,18 @@ import React from 'react';
 import '../style.css';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-// eslint-disable-next-line no-unused-vars
 import Calculate from '../logic/calculate';
+
+export default class App extends React.Component{
+  constructor() {
+    super();
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  } 
+}
 
 export default function App() {
   return (
