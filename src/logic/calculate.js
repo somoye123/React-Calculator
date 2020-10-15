@@ -1,7 +1,10 @@
 import operate from './operate';
 
+let operationTotal = null;
+
 export default (calculator, buttonName) => {
-  const operations = ['+', '-', 'x', '÷'];
+  const operations = ['+', '-', 'x', '÷', '%'];
+  const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
   let { total, next, operation } = calculator;
 
@@ -15,21 +18,31 @@ export default (calculator, buttonName) => {
   if (buttonName === '%') {
     if (next) {
       next *= 0.01;
+      next = next.toString();
     } else {
       total *= 0.01;
+      total = total.toString();
     }
   }
 
   if (buttonName === '=') {
     if (next) {
-      total = operate(total, next, operation);
+      const op = operate(total, next, operation);
+      total = op.toString();
+      operationTotal = op.toString();
       next = null;
       operation = null;
     }
   }
 
   if (operations.includes(buttonName)) {
-    operation = buttonName;
+    if (operationTotal) {
+      operationTotal = null;
+      operation = buttonName;
+    }
+    if (next === null) {
+      operation = buttonName;
+    }
   }
 
   if (buttonName === '.') {
@@ -42,6 +55,21 @@ export default (calculator, buttonName) => {
     total = null;
     next = null;
     operation = null;
+  }
+
+  if (numbers.includes(buttonName)) {
+    if (total && operationTotal) {
+      operationTotal = null;
+      total = buttonName;
+    } else if (operation === null && total === null) {
+      total = buttonName;
+    } else if (operation === null && operationTotal === null && total) {
+      total = `${total}${buttonName}`;
+    } else if (next) {
+      next = `${next}${buttonName}`;
+    } else {
+      next = buttonName;
+    }
   }
 
   return { total, next, operation };
