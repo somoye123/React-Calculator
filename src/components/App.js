@@ -12,7 +12,7 @@ export default class App extends React.Component {
       next: null,
       operation: null,
     };
-  } 
+  }
 
   handleClick = buttonName => {
     const { total, next, operation } = this.state;
