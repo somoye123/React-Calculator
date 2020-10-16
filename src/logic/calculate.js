@@ -51,9 +51,9 @@ export default (calculator, buttonName) => {
       total = `${total.toString()}.`;
     } else if (operation === null && total === null) {
       total = '0.';
-    } else if (operation === null && operationTotal === null && total && !total.toString().contains('.')) {
+    } else if (operation === null && operationTotal === null && total && !total.toString().includes('.')) {
       total = `${total.toString()}.`;
-    } else if (next && !next.toString().contains('.')) {
+    } else if (next && !next.toString().includes('.')) {
       next = `${next.toString()}.`;
     } else if (total && operation && next === null) {
       next = '0.';
