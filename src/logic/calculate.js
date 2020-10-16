@@ -46,8 +46,17 @@ export default (calculator, buttonName) => {
   }
 
   if (buttonName === '.') {
-    if (next && !next.toString().contains('.')) {
+    if (total && operationTotal) {
+      operationTotal = null;
+      total = `${total.toString()}.`;
+    } else if (operation === null && total === null) {
+      total = '0.';
+    } else if (operation === null && operationTotal === null && total && !total.toString().contains('.')) {
+      total = `${total.toString()}.`;
+    } else if (next && !next.toString().contains('.')) {
       next = `${next.toString()}.`;
+    } else if (total && operation && next === null) {
+      next = '0.';
     }
   }
 
